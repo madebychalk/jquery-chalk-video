@@ -1,0 +1,59 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Chalk Video Plugin Example</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <style type="text/css">
+          html, body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            width: 100%;
+          }
+
+          #chalk-video,
+          .background_video,
+          video {
+            display: block;
+            position: absolute;
+            left: 0;
+            top: 0;
+            min-width: 100%;
+            min-height: 100%;
+          }
+
+        </style>
+
+    </head>
+    <body>
+
+        <div id="chalk-video"></div>
+
+
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+        <script src="../jquery.chalk.background_video.js"></script>
+
+        <script>
+          $('#chalk-video')
+            .background_video({
+              playlist:[
+                [
+                  { src: 'https://s3-us-west-2.amazonaws.com/choice-financial-group/video/fargo/mp4/fargo-ferris-03.mp4', type: 'video/mp4' },
+                  { src: 'https://s3-us-west-2.amazonaws.com/choice-financial-group/video/fargo/webm/fargo-ferris-03.webm', type: 'video/webm' }
+                ],[
+                  { src: 'https://s3-us-west-2.amazonaws.com/choice-financial-group/video/fargo/mp4/fargo-island-04.mp4', type: 'video/mp4' },
+                  { src: 'https://s3-us-west-2.amazonaws.com/choice-financial-group/video/fargo/webm/fargo-island-04.webm', type: 'video/webm' }
+                ],[
+                  { src: 'https://s3-us-west-2.amazonaws.com/choice-financial-group/video/fargo/mp4/fargo-theater-01.mp4', type: 'video/mp4' },
+                  { src: 'https://s3-us-west-2.amazonaws.com/choice-financial-group/video/fargo/webm/fargo-theater-01.webm', type: 'video/webm' }
+                ]
+              ]
+            });
+        </script>
+
+    </body>
+</html>
